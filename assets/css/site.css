@@ -20,16 +20,17 @@ body.nav-open { overflow: hidden; }
 
 .devya-logo-mark {
   align-items: center;
-  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, .92), transparent 34%), linear-gradient(145deg, var(--devya-cream), #fff 55%, rgba(255, 192, 48, .32));
-  border: 1px solid rgba(255, 192, 48, .38);
-  border-radius: 1rem;
-  box-shadow: 0 14px 35px rgba(32, 80, 16, .12);
-  display: grid; height: 52px; place-items: center; width: 52px;
+  display: grid;
+  height: 52px;
+  place-items: center;
+  width: 52px;
+  overflow: hidden;
+  border-radius: 50%; /* optional, if logo.png isn't already circular */
 }
-.devya-logo-symbol {
-  background: linear-gradient(135deg, var(--devya-forest), var(--devya-teal) 45%, var(--devya-saffron));
-  background-clip: text; color: transparent; font-size: 1.65rem;
-  filter: drop-shadow(0 6px 12px rgba(32, 80, 16, .18));
+.devya-logo-mark img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain; /* or cover, if logo fills the circle */
 }
 .nav-link { position: relative; }
 .nav-link i { color: var(--devya-leaf); font-size: .78rem; transition: color .2s ease, transform .2s ease; }
@@ -121,6 +122,9 @@ body.nav-open { overflow: hidden; }
   background-image: linear-gradient(90deg, rgba(255, 192, 48, .22), transparent 28%, transparent 72%, rgba(0, 112, 96, .14)), linear-gradient(rgba(32, 80, 16, .035) 1px, transparent 1px);
   background-size: 100% 100%, 100% 34px; content: ""; inset: 0; pointer-events: none; position: absolute;
 }
+
+
+
 .welcome-section > div { position: relative; z-index: 1; }
 .welcome-media { display: grid; gap: 1rem; position: relative; }
 .welcome-image-card { background: linear-gradient(145deg, #ffffff, var(--devya-cream)); border: 1px solid var(--devya-line); border-radius: 1.75rem; box-shadow: 0 28px 80px rgba(32, 80, 16, .13); overflow: hidden; padding: .75rem; }
